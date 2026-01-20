@@ -1,0 +1,1953 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Edel White | Convite CIOSP 2026</title>
+
+<!-- Meta tags -->
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<meta name="theme-color" content="#0A4B6E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!-- Fontes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    /* Cores mais vibrantes com mais azul claro */
+    --bg0: #F5F9FF; /* Fundo mais azulado */
+    --bg1: #FFFFFF;
+    --primary: #0A4B6E;
+    --secondary: #1A8BC8; /* Azul mais claro e vibrante */
+    --silver-light: #2D3748;
+    --silver-medium: #4A5568;
+    --silver-dark: #718096;
+    --accent: #2C9FD9;
+    --ice: #1A202C;
+    --steel: #A0AEC0;
+    
+    /* Gradientes mais azulados */
+    --gradient-blue: linear-gradient(135deg, #0A4B6E 0%, #1A8BC8 50%, #2C9FD9 100%);
+    --gradient-light: linear-gradient(135deg, #F5F9FF 0%, #FFFFFF 50%, #E8F2FF 100%);
+    --gradient-silver: linear-gradient(135deg, rgba(26, 139, 200, 0.1) 0%, rgba(44, 159, 217, 0.05) 100%);
+    
+    --shadow-xl: 0 10px 25px -5px rgba(10, 75, 110, 0.15);
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --radius-sm: 8px;
+  }
+
+  *{ 
+    box-sizing:border-box; 
+    margin:0; 
+    padding:0; 
+  }
+
+  html, body { 
+    min-height: 100%; 
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+  
+  body{
+    font-family: 'Inter', sans-serif;
+    color: var(--ice);
+    background: var(--bg0);
+    min-height: 100vh;
+    min-height: 100svh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Background clean */
+  .background-art{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:1;
+    background: linear-gradient(135deg, #2C9FD9 0%, #E8F2FF 100%);
+  }
+
+  .silver-grid{
+    position:absolute;
+    inset:0;
+    background-image:
+      linear-gradient(rgba(26, 139, 200, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26, 139, 200, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity:0.7;
+  }
+
+  /* ===================== INTRO ===================== */
+  .intro-container{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #2C9FD9 0%, #FFFFFF 100%);
+    z-index: 1000;
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding:
+      env(safe-area-inset-top)
+      env(safe-area-inset-right)
+      env(safe-area-inset-bottom)
+      env(safe-area-inset-left);
+    overflow: hidden;
+  }
+
+  .intro-hidden{
+    opacity:0;
+    pointer-events:none;
+    transform: translateY(-20px);
+  }
+
+  .intro-logo{
+    width: min(250px, 70vw);
+    height: min(250px, 70vw);
+    margin-bottom: clamp(1.5rem, 4vh, 3rem);
+    position:relative;
+  }
+
+  .swiss-loader{ width:100%; height:100%; position:relative; }
+
+  .company-logo-loader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .company-logo-loader img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(26, 139, 200, 0.3));
+  }
+
+.swiss-loader{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.company-logo-loader{
+  position: relative;
+  z-index: 3;
+}
+
+.swiss-loader::before,
+.swiss-loader::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 3px solid transparent;
+  will-change: transform;
+  pointer-events:none;
+}
+
+.swiss-loader::before{
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
+  border-top-color: var(--secondary);
+  border-left-color: rgba(26, 139, 200, 0.3);
+  animation: ringSpin 3s linear infinite;
+}
+
+.swiss-loader::after{
+  width: calc(100% + 70px);
+  height: calc(100% + 70px);
+  border-top-color: var(--accent);
+  border-right-color: rgba(44, 159, 217, 0.3);
+  animation: ringSpinReverse 4s linear infinite;
+}
+
+@keyframes ringSpin{
+  from{ transform: translate(-50%, -50%) rotate(0deg); }
+  to{ transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes ringSpinReverse{
+  from{ transform: translate(-50%, -50%) rotate(360deg); }
+  to{ transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+  .intro-text{
+    text-align:center;
+    max-width: min(800px, 90vw);
+    width: 100%;
+    padding: 0 clamp(0.5rem, 2vw, 1rem);
+  }
+
+  .intro-title{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.8rem, 6vw, 4rem);
+    font-weight:800;
+    margin-bottom: clamp(0.8rem, 2vh, 1.5rem);
+    background: var(--gradient-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0.5rem;
+  }
+
+  .title-sub{
+    font-size: clamp(0.7rem, 2.5vw, 1.2rem);
+    color: var(--secondary);
+    font-weight:600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: clamp(0.3rem, 1vh, 0.5rem);
+    line-height: 1.4;
+    -webkit-text-fill-color: var(--secondary);
+  }
+
+  .intro-loading{
+    width: min(300px, 85vw);
+    height: 4px;
+    background: rgba(26, 139, 200, 0.1);
+    border-radius: 2px;
+    overflow:hidden;
+    margin: clamp(1.5rem, 4vh, 3rem) auto;
+  }
+
+  .intro-progress{
+    width:0%;
+    height:100%;
+    background: var(--gradient-blue);
+    animation: loading 8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    border-radius:2px;
+  }
+
+  @keyframes loading{
+    0%{ width:0%; }
+    100%{ width:100%; }
+  }
+
+  .intro-footer { margin-top: clamp(1.5rem, 4vh, 3rem); text-align: center; }
+  .longevity-logo { 
+    max-width: min(200px, 60vw); 
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(26, 139, 200, 0.2));
+  }
+
+  /* ===================== LAYOUT PRINCIPAL ===================== */
+  .main-container{
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 1s 8s forwards;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-top: max(1rem, env(safe-area-inset-top));
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  @keyframes fadeIn{ to{ opacity:1; } }
+
+  .invite-card{
+    width: 100%;
+    max-width: 1100px;
+    background: var(--bg1);
+    backdrop-filter: none;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(26, 139, 200, 0.15);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .card-header{
+    padding: clamp(1.5rem, 4vw, 2rem) clamp(1rem, 3vw, 1.5rem);
+    position:relative;
+    overflow:hidden;
+    background: var(--gradient-silver);
+    text-align: center;
+    border-bottom: 1px solid rgba(26, 139, 200, 0.1);
+  }
+
+  .header-content{
+    position:relative;
+    z-index:2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .brand-section{
+    width: 100%;
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+  }
+
+  .logo-container{
+    position:relative;
+    width: 100%;
+    max-width: min(500px, 90vw);
+    height: auto;
+    aspect-ratio: 2/1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin: 0 auto clamp(1rem, 3vw, 1.5rem);
+  }
+
+  .new-logo img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(26, 139, 200, 0.15));
+    width: 80%;
+  }
+
+  .invite-title{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.1rem, 3.5vw, 1.8rem);
+    font-weight:600;
+    line-height:1.3;
+    margin-bottom:clamp(0.8rem, 2vw, 1rem);
+    color: var(--ice);
+    max-width: min(800px, 95vw);
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 clamp(0.5rem, 2vw, 1rem);
+  }
+
+  .invite-title span{
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  .invite-subtitle{
+    font-size: clamp(0.85rem, 2vw, 1.1rem);
+    color: var(--silver-medium);
+    line-height:1.5;
+    max-width: min(700px, 95vw);
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 clamp(0.5rem, 2vw, 1rem);
+  }
+
+  /* GRID COM CARD DE EVENTO EXPANDIDO */
+  .content-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 2vw, 1.5rem);
+    padding: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  @media (min-width: 768px) {
+    .content-grid{
+      grid-template-columns: 2fr 1fr;
+      gap: clamp(1.5rem, 3vw, 2rem);
+      padding: clamp(1.5rem, 3vw, 2rem);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .content-grid{
+      grid-template-columns: 2fr 1fr;
+      gap: clamp(2rem, 4vw, 2.5rem);
+      padding: clamp(2rem, 4vw, 2.5rem);
+    }
+  }
+
+  /* Card de evento expandido */
+  .event-card-expanded {
+    grid-column: 1 / -1; /* Ocupa todas as colunas em mobile */
+    background: var(--bg1);
+    border-radius: var(--radius-md);
+    padding: clamp(1.5rem, 3vw, 2rem);
+    border: 1px solid rgba(26, 139, 200, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  @media (min-width: 768px) {
+    .event-card-expanded {
+      grid-column: 1 / 2; /* Ocupa apenas a primeira coluna (maior) */
+    }
+  }
+
+  .event-card-expanded:hover{
+    transform: translateY(-4px);
+    border-color: rgba(26, 139, 200, 0.2);
+    box-shadow: 0 8px 24px rgba(26, 139, 200, 0.15);
+  }
+
+  .event-card-expanded::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height: 2px;
+    background: var(--gradient-blue);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+
+  .event-card-expanded:hover::before{ transform: scaleX(1); }
+
+  .event-header{
+    display:flex;
+    align-items:center;
+    gap:clamp(0.8rem, 2vw, 1rem);
+    margin-bottom:clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .event-icon{
+    width: clamp(45px, 8vw, 50px);
+    height: clamp(45px, 8vw, 50px);
+    border-radius: var(--radius-sm);
+    background: rgba(26, 139, 200, 0.12);
+    border: 1px solid rgba(26, 139, 200, 0.2);
+    display:grid;
+    place-items:center;
+    color: var(--secondary);
+    font-size:clamp(1.2rem, 2vw, 1.3rem);
+    flex-shrink: 0;
+  }
+
+  .event-title{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
+    font-weight:700;
+    background: var(--gradient-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+  }
+
+  .event-title span {
+    color: var(--secondary);
+    -webkit-text-fill-color: var(--secondary);
+  }
+
+  .event-content{
+    color: var(--silver-medium);
+    line-height:1.6;
+    font-size: clamp(0.95rem, 1.8vw, 1rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .event-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  @media (min-width: 480px) {
+    .event-grid{ 
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .event-grid{ 
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .event-item{
+    background: rgba(26, 139, 200, 0.05);
+    padding: clamp(1rem, 2vw, 1.2rem);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--secondary);
+    transition: all 0.3s ease;
+  }
+
+  .event-item:hover{
+    background: rgba(26, 139, 200, 0.08);
+    transform: translateX(3px);
+  }
+
+  .event-label{
+    font-size: clamp(0.75rem, 1.5vw, 0.85rem);
+    color: var(--silver-dark);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    margin-bottom: clamp(0.3rem, 1vw, 0.5rem);
+    font-weight:500;
+  }
+
+  .event-value{
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-weight:600;
+    color: var(--ice);
+    line-height: 1.3;
+  }
+
+  /* Card normal */
+  .detail-card{
+    background: var(--bg1);
+    border-radius: var(--radius-md);
+    padding: clamp(1.2rem, 3vw, 1.5rem);
+    border: 1px solid rgba(26, 139, 200, 0.1);
+    transition: all 0.3s ease;
+    position:relative;
+    overflow:hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  .detail-card:hover{
+    transform: translateY(-4px);
+    border-color: rgba(26, 139, 200, 0.2);
+    box-shadow: 0 8px 24px rgba(26, 139, 200, 0.15);
+  }
+
+  .detail-card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height: 2px;
+    background: var(--gradient-blue);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+
+  .detail-card:hover::before{ transform: scaleX(1); }
+
+  .detail-header{
+    display:flex;
+    align-items:center;
+    gap:clamp(0.8rem, 2vw, 1rem);
+    margin-bottom:clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .detail-icon{
+    width: clamp(45px, 8vw, 50px);
+    height: clamp(45px, 8vw, 50px);
+    border-radius: var(--radius-sm);
+    background: rgba(26, 139, 200, 0.12);
+    border: 1px solid rgba(26, 139, 200, 0.2);
+    display:grid;
+    place-items:center;
+    color: var(--secondary);
+    font-size:clamp(1.2rem, 2vw, 1.3rem);
+    flex-shrink: 0;
+  }
+
+  .detail-title{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
+    font-weight:700;
+    background: var(--gradient-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+  }
+
+  .detail-title span {
+    color: var(--secondary);
+    -webkit-text-fill-color: var(--secondary);
+  }
+
+  .detail-content{
+    color: var(--silver-medium);
+    line-height:1.6;
+    font-size: clamp(0.95rem, 1.8vw, 1rem);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .info-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: clamp(0.8rem, 1.5vw, 1rem);
+  }
+
+  @media (min-width: 480px) {
+    .info-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .info-item{
+    background: rgba(26, 139, 200, 0.05);
+    padding: clamp(0.8rem, 1.5vw, 1rem);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--secondary);
+    transition: all 0.3s ease;
+  }
+
+  .info-item:hover{
+    background: rgba(26, 139, 200, 0.08);
+    transform: translateX(3px);
+  }
+
+  .info-label{
+    font-size: clamp(0.75rem, 1.5vw, 0.85rem);
+    color: var(--silver-dark);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    margin-bottom: clamp(0.3rem, 1vw, 0.5rem);
+    font-weight:500;
+  }
+
+  .info-value{
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-weight:600;
+    color: var(--ice);
+    line-height: 1.3;
+  }
+
+  /* ====== CARDS DE ESTADOS ====== */
+  .states-section{
+    grid-column: 1 / -1;
+    margin: clamp(1rem, 2vw, 1.5rem) 0 0;
+  }
+
+  .states-container{
+    background: var(--bg1);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.5rem, 3vw, 2rem);
+    border: 1px solid rgba(26, 139, 200, 0.1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  .states-title{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-weight: 700;
+    background: var(--gradient-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    text-align: center;
+  }
+
+  .states-title span{
+    color: var(--secondary);
+    -webkit-text-fill-color: var(--secondary);
+  }
+
+  .states-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+  }
+
+  @media (max-width: 768px) {
+    .states-grid{
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+
+  @media (max-width: 480px) {
+    .states-grid{
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .state-card{
+    background: var(--bg1);
+    border-radius: var(--radius-md);
+    padding: clamp(1.2rem, 2vw, 1.5rem);
+    border: 1px solid rgba(26, 139, 200, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+  }
+
+  .state-card:hover{
+    transform: translateY(-3px);
+    border-color: rgba(26, 139, 200, 0.2);
+    box-shadow: 0 8px 16px rgba(26, 139, 200, 0.15);
+  }
+
+  .state-card.active{
+    background: rgba(26, 139, 200, 0.08);
+    border-color: rgba(26, 139, 200, 0.3);
+    box-shadow: 0 0 0 1px rgba(26, 139, 200, 0.1), 0 8px 16px rgba(0,0,0,0.08);
+  }
+
+  .state-card-header{
+    display: flex;
+    align-items: center;
+    gap: clamp(0.8rem, 1.5vw, 1rem);
+    margin-bottom: clamp(1rem, 2vw, 1.2rem);
+  }
+
+  .state-icon{
+    width: clamp(40px, 6vw, 48px);
+    height: clamp(40px, 6vw, 48px);
+    border-radius: var(--radius-sm);
+    background: rgba(26, 139, 200, 0.12);
+    border: 1px solid rgba(26, 139, 200, 0.2);
+    display: grid;
+    place-items: center;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: var(--secondary);
+    flex-shrink: 0;
+  }
+
+  .state-name{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    font-weight: 700;
+    color: var(--ice);
+    line-height: 1.2;
+  }
+
+  .state-regions-count{
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    color: var(--silver-medium);
+    margin-top: 0.3rem;
+  }
+
+  .state-card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: clamp(0.8rem, 1.5vw, 1rem);
+    padding-top: clamp(0.8rem, 1.5vw, 1rem);
+    border-top: 1px solid rgba(26, 139, 200, 0.1);
+  }
+
+  .select-state-btn{
+    padding: 0.5rem 1rem;
+    background: rgba(26, 139, 200, 0.1);
+    border: 1px solid rgba(26, 139, 200, 0.2);
+    border-radius: 8px;
+    color: var(--secondary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .select-state-btn:hover{
+    background: rgba(26, 139, 200, 0.15);
+    border-color: rgba(26, 139, 200, 0.3);
+    transform: translateY(-1px);
+  }
+
+  /* Painel de detalhes do estado */
+  .state-details-panel{
+    background: var(--bg1);
+    border-radius: var(--radius-md);
+    padding: clamp(1.5rem, 3vw, 2rem);
+    border: 1px solid rgba(26, 139, 200, 0.1);
+    display: none;
+  }
+
+  .state-details-panel.active{
+    display: block;
+  }
+
+  .selected-state-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    padding-bottom: clamp(1rem, 2vw, 1.2rem);
+    border-bottom: 1px solid rgba(26, 139, 200, 0.1);
+  }
+
+  .selected-state-title{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .back-to-states{
+    padding: 0.5rem 1rem;
+    background: rgba(26, 139, 200, 0.05);
+    border: 1px solid rgba(26, 139, 200, 0.1);
+    border-radius: 8px;
+    color: var(--silver-medium);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .back-to-states:hover{
+    background: rgba(26, 139, 200, 0.08);
+    border-color: rgba(26, 139, 200, 0.2);
+  }
+
+  .regions-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  @media (max-width: 768px) {
+    .regions-grid{
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+
+  .region-card{
+    background: rgba(26, 139, 200, 0.03);
+    border-radius: var(--radius-sm);
+    padding: clamp(1rem, 2vw, 1.2rem);
+    border: 1px solid rgba(26, 139, 200, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .region-card:hover{
+    background: rgba(26, 139, 200, 0.06);
+    border-color: rgba(26, 139, 200, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .region-card.active{
+    background: rgba(26, 139, 200, 0.08);
+    border-color: rgba(26, 139, 200, 0.3);
+  }
+
+  .region-name{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
+    font-weight: 600;
+    color: var(--ice);
+    margin-bottom: 0.5rem;
+  }
+
+  .region-count{
+    font-size: 0.85rem;
+    color: var(--silver-medium);
+  }
+
+  /* Lista de representantes */
+  .representatives-section{
+    margin-top: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .representatives-title{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-weight: 600;
+    color: var(--ice);
+    margin-bottom: clamp(1rem, 2vw, 1.2rem);
+  }
+
+  .representatives-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .representative-card{
+    background: rgba(26, 139, 200, 0.03);
+    border-radius: var(--radius-sm);
+    padding: clamp(1rem, 2vw, 1.2rem);
+    border: 1px solid rgba(26, 139, 200, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .representative-card:hover{
+    background: rgba(26, 139, 200, 0.05);
+    border-color: rgba(26, 139, 200, 0.15);
+    transform: translateX(3px);
+  }
+
+  .rep-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+  }
+
+  .rep-name{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
+    font-weight: 600;
+    color: var(--ice);
+  }
+
+  .rep-contact-buttons{
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .contact-btn{
+    padding: 0.4rem 0.8rem;
+    background: rgba(26, 139, 200, 0.1);
+    border: 1px solid rgba(26, 139, 200, 0.2);
+    border-radius: 6px;
+    color: var(--secondary);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .contact-btn:hover{
+    background: rgba(26, 139, 200, 0.15);
+    border-color: rgba(26, 139, 200, 0.3);
+    transform: translateY(-1px);
+  }
+
+  .contact-btn.whatsapp{
+    background: rgba(37, 211, 102, 0.08);
+    border-color: rgba(37, 211, 102, 0.15);
+    color: #25D366;
+  }
+
+  .contact-btn.whatsapp:hover{
+    background: rgba(37, 211, 102, 0.12);
+    border-color: rgba(37, 211, 102, 0.3);
+  }
+
+  .rep-details{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.8rem;
+  }
+
+  .rep-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .rep-label{
+    font-size: 0.75rem;
+    color: var(--silver-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .rep-value{
+    font-size: 0.9rem;
+    color: var(--ice);
+    font-weight: 500;
+  }
+
+  .no-representatives{
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--silver-medium);
+  }
+
+  .no-representatives-icon{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+    color: var(--silver-dark);
+  }
+
+  /* ====== INOVAÇÕES (FULL WIDTH) ====== */
+  .innovations-section{ 
+    grid-column: 1 / -1; 
+    margin: clamp(0.5rem, 1vw, 0.5rem) 0 0; 
+    width: 100%;
+  }
+
+  .innovations-wide{
+    background: var(--bg1);
+    border-radius: var(--radius-lg);
+    padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2rem);
+    border: 1px solid rgba(26, 139, 200, 0.1);
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    width: 100%;
+  }
+
+  .innovations-wide > *{ position: relative; z-index: 2; }
+
+  .innovations-wide-header{
+    display:flex;
+    align-items:center;
+    gap: clamp(0.8rem, 2vw, 1rem);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .innovations-wide-icon{
+    width: clamp(45px, 8vw, 52px);
+    height: clamp(45px, 8vw, 52px);
+    border-radius: 16px;
+    background: rgba(26, 139, 200, 0.12);
+    border: 1px solid rgba(26, 139, 200, 0.2);
+    display:grid;
+    place-items:center;
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    color: var(--secondary);
+  }
+
+  .innovations-wide-title{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.3rem, 3.5vw, 2.1rem);
+    font-weight: 800;
+    background: var(--gradient-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+  }
+
+  .innovations-wide-title span {
+    color: var(--secondary);
+    -webkit-text-fill-color: var(--secondary);
+  }
+
+  .innovations-wide-text{
+    color: var(--silver-medium);
+    line-height: 1.75;
+    font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+    margin-top: clamp(0.5rem, 1vw, 0.8rem);
+  }
+
+  .innovations-wide-grid{
+    display:grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(0.8rem, 1.5vw, 1.1rem);
+    margin-top: clamp(1rem, 2vw, 1.6rem);
+  }
+
+  @media (max-width: 1024px){
+    .innovations-wide-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px){
+    .innovations-wide-grid{ grid-template-columns: 1fr; }
+    .innovations-wide-text{ text-align: left; }
+    .innovations-wide-header{ flex-direction: row; }
+  }
+
+  .innovation-item{
+    background: rgba(26, 139, 200, 0.03);
+    border-radius: var(--radius-sm);
+    padding: clamp(1rem, 2vw, 1.2rem);
+    border: 1px solid rgba(26, 139, 200, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .innovation-item:hover{
+    background: rgba(26, 139, 200, 0.06);
+    border-color: rgba(26, 139, 200, 0.2);
+    transform: translateY(-3px);
+  }
+
+  .innovation-category{
+    font-size: clamp(0.75rem, 1.5vw, 0.85rem);
+    color: var(--silver-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: clamp(0.6rem, 1.2vw, 0.8rem);
+    font-weight: 500;
+  }
+
+  .innovation-value{
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    font-weight: 700;
+    color: var(--ice);
+    line-height: 1.3;
+  }
+
+  /* ====== CTA DESTACADO ====== */
+  .cta-section{ 
+    grid-column: 1 / -1; 
+    margin: clamp(1rem, 2vw, 1.5rem) 0; 
+    width: 100%;
+  }
+
+  .cta-container{
+    background: var(--bg1);
+    border-radius: var(--radius-lg);
+    padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2rem);
+    border: 1px solid rgba(26, 139, 200, 0.1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    width: 100%;
+  }
+
+  .cta-heading{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.4rem, 4vw, 2.5rem);
+    font-weight: 800;
+    background: var(--gradient-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: clamp(0.8rem, 2vw, 1rem);
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cta-heading span {
+    color: var(--secondary);
+    -webkit-text-fill-color: var(--secondary);
+  }
+
+  .cta-description{
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    color: var(--silver-medium);
+    max-width: min(600px, 95vw);
+    margin: 0 auto clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cta-button-main{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.8rem, 2vw, 1rem);
+    padding: clamp(1rem, 2.5vw, 1.5rem) clamp(2rem, 4vw, 3rem);
+    background: var(--gradient-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    letter-spacing: -0.01em;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(26, 139, 200, 0.25);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .cta-button-main:hover{
+    background: linear-gradient(135deg, #1A8BC8 0%, #2C9FD9 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(26, 139, 200, 0.35);
+  }
+
+  .cta-button-main:active{ transform: translateY(-1px); }
+
+  .cta-icon{ font-size: clamp(1.2rem, 2vw, 1.5rem); transition: transform 0.3s ease; }
+  .cta-button-main:hover .cta-icon{ transform: translateX(3px); }
+
+  .card-footer{
+    padding: clamp(1rem, 2vw, 1.5rem);
+    border-top: 1px solid rgba(26, 139, 200, 0.1);
+    text-align:center;
+    background: linear-gradient(to bottom, rgba(26, 139, 200, 0.02), rgba(26, 139, 200, 0.05));
+  }
+
+  .footer-text{
+    color: var(--silver-medium);
+    font-size: clamp(0.85rem, 1.5vw, 0.9rem);
+    line-height:1.5;
+    max-width: min(800px, 95vw);
+    margin: 0 auto;
+  }
+
+  .footer-text strong{
+    color: var(--primary);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight:700;
+  }
+
+  /* ===== Responsividade específica para celulares ===== */
+  @media (max-width: 768px) {
+    .main-container {
+      padding: 0.5rem;
+      padding-top: max(0.5rem, env(safe-area-inset-top));
+      padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+    }
+    
+    .invite-card {
+      border-radius: 20px;
+    }
+    
+    .content-grid {
+      padding: 1rem;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+    
+    .event-card-expanded {
+      grid-column: 1 / -1;
+    }
+    
+    .card-header {
+      padding: 1rem;
+    }
+    
+    .logo-container {
+      margin-bottom: 1rem;
+    }
+    
+    .detail-card,
+    .states-container {
+      padding: 1rem;
+    }
+    
+    .event-grid,
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .states-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .regions-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .rep-details {
+      grid-template-columns: 1fr;
+    }
+    
+    .cta-container {
+      padding: 1.5rem 1rem;
+      border-radius: 20px;
+    }
+    
+    .cta-button-main {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .main-container {
+      padding: 0.25rem;
+    }
+    
+    .invite-card {
+      border-radius: 16px;
+    }
+    
+    .content-grid {
+      padding: 0.75rem;
+      gap: 0.75rem;
+    }
+    
+    .card-header {
+      padding: 0.75rem;
+    }
+    
+    .invite-title {
+      font-size: 1rem;
+      padding: 0;
+    }
+    
+    .invite-subtitle {
+      font-size: 0.85rem;
+      padding: 0;
+    }
+    
+    .detail-card,
+    .states-container,
+    .event-card-expanded {
+      padding: 0.75rem;
+    }
+    
+    .detail-header,
+    .event-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .regions-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .rep-contact-buttons {
+      flex-direction: column;
+    }
+    
+    .contact-btn {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .cta-heading {
+      font-size: 1.2rem;
+    }
+    
+    .cta-description {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Garante que os itens não "escondam" o texto */
+  .info-value,
+  .detail-content,
+  .innovations-wide-text,
+  .innovation-category,
+  .innovation-value,
+  .invite-title,
+  .invite-subtitle,
+  .event-content,
+  .event-value{
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+    hyphens: auto;
+  }
+
+  /* Remove scroll horizontal */
+  * {
+    max-width: 100%;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Melhora o touch em mobile */
+  button, 
+  a, 
+  .cta-button-main,
+  .select-state-btn,
+  .back-to-states,
+  .region-card,
+  .contact-btn {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /* =========================================== */
+  /* REMOÇÃO DAS ANIMAÇÕES E AJUSTES DE TAMANHO */
+  /* =========================================== */
+
+  /* REMOVIDO: Todas as animações float */
+  .detail-card,
+  .states-container,
+  .innovations-wide,
+  .cta-container,
+  .state-card,
+  .region-card,
+  .representative-card,
+  .info-item,
+  .innovation-item,
+  .event-card-expanded,
+  .event-item {
+    animation: none !important;
+  }
+
+  /* Garantir tamanho consistente sem animação */
+  .detail-card,
+  .states-container {
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .event-card-expanded {
+    min-height: 400px;
+  }
+
+  .detail-content,
+  .states-container > .states-title,
+  .event-content {
+    flex-grow: 1;
+  }
+
+  .states-section {
+    grid-column: 1 / -1;
+    margin: clamp(1rem, 2vw, 1.5rem) 0 0;
+  }
+
+  .states-container {
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 768px) {
+    .detail-card,
+    .states-container,
+    .event-card-expanded {
+      min-height: auto;
+      height: auto;
+    }
+    
+    .content-grid > * {
+      min-height: auto;
+    }
+  }
+
+  /* Remover efeitos de animação dos cards */
+  .animate-in, .delay-1, .delay-2, .delay-3 {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+</style>
+</head>
+
+<body>
+  <!-- Background -->
+  <div class="background-art">
+    <div class="silver-grid"></div>
+  </div>
+
+  <!-- Introdução -->
+  <div class="intro-container" id="introContainer">
+    <div class="intro-logo">
+      <div class="swiss-loader">
+        <div class="company-logo-loader">
+          <img src="img/logo-edel-white-png-removebg-preview.png" alt="Logo da Empresa">
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-text">
+      <div class="intro-title">
+        <br>
+        <span class="title-sub">CONVITE EXCLUSIVO CIOSP 2026</span>
+      </div>
+
+      <div class="intro-loading">
+        <div class="intro-progress"></div>
+      </div>
+
+      <div class="intro-footer">
+        <img src="img/longevity-removebg-preview.png" alt="Longevity Lab Basel" class="longevity-logo">
+      </div>
+    </div>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <div class="main-container">
+    <div class="invite-card">
+
+      <!-- Header -->
+      <div class="card-header">
+        <div class="header-content">
+          <div class="brand-section">
+            <div class="logo-container">
+              <div class="new-logo">
+                <img src="img/logo-preto-png.png" alt="EdelWhite Logo">
+              </div>
+            </div>
+
+            <div class="invite-title">
+              Convidamos você para um encontro exclusivo no maior evento de <span>odontologia mundial</span>, onde teremos também o relançamento global da marca edelwhite swiss.
+            </div>
+            <div class="invite-subtitle">
+              Uma oportunidade única para conhecer as mais recentes inovações em saúde bucal.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="content-grid">
+        <!-- CARD DE EVENTO EXPANDIDO -->
+        <div class="event-card-expanded">
+          <div class="event-header">
+            <div class="event-icon">🦷</div>
+            <div class="event-title">O Evento</div>
+          </div>
+          <div class="event-content">
+            O <strong>CIOSP 2026</strong> é o maior congresso de odontologia do mundo,
+            reunindo os principais especialistas, pesquisadores e empresas do setor.
+            Um ambiente perfeito para networking, aprendizado e descoberta de tendências.
+          </div>
+          <div class="event-grid">
+            <div class="event-item">
+              <div class="event-label">LOCAL</div>
+              <div class="event-value">Expo Center Norte</div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-label">ENDEREÇO</div>
+              <div class="event-value">Rua José Bernardo Pinto, Nº333 - Vila Guilherme</div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-label">PAVILHÃO</div>
+              <div class="event-value">Vermelho e Verde</div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-label">ESTANDE</div>
+              <div class="event-value">C11 e E61</div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-label">PERÍODO</div>
+              <div class="event-value">28 a 31 Janeiro</div>
+            </div>
+            <div class="event-item">
+              <div class="event-label">HORÁRIO</div>
+              <div class="event-value">10h às 20h</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Normal (anteriormente detail-card) -->
+        <div class="detail-card">
+          <div class="detail-header">
+            <div class="detail-icon">🎯</div>
+            <div class="detail-title">Oportunidade Única</div>
+          </div>
+          <div class="detail-content">
+            Este encontro exclusivo é uma chance imperdível para:
+            <br><br>
+            • Conhecer as inovações da Edelwhite Swiss 2026<br>
+            • Participar do relançamento global da marca<br>
+            • Network com os principais profissionais do setor<br>
+            • Descobrir tendências do mercado odontológico
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <div class="info-label">EXCLUSIVIDADE</div>
+              <div class="info-value">Convite Personalizado</div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-label">NETWORKING</div>
+              <div class="info-value">Com Especialistas</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seção de Estados com Cards -->
+        <div class="states-section" id="statesSection">
+          <div class="states-container">
+            <div class="states-title">Encontre seu <span>Representante</span></div>
+            
+            <!-- Grid de Cards dos Estados -->
+            <div class="states-grid" id="statesGrid">
+              <!-- Os cards serão gerados dinamicamente pelo JavaScript -->
+            </div>
+
+            <!-- Painel de detalhes do estado selecionado -->
+            <div class="state-details-panel" id="stateDetailsPanel">
+              <!-- Conteúdo será preenchido dinamicamente -->
+            </div>
+          </div>
+        </div>
+
+        <!-- INOVAÇÕES (FULL WIDTH) -->
+        <div class="innovations-section" id="inov">
+          <div class="innovations-wide">
+            <div class="innovations-wide-header">
+              <div class="innovations-wide-icon">💡</div>
+              <div class="innovations-wide-title">Inovações <span>2026</span></div>
+            </div>
+
+            <div class="innovations-wide-text">
+              O relançamento global de 2026 é mais do que um novo ciclo de produtos; é uma redefinição fundamental do nosso propósito e do nosso mercado.
+              Estamos fazendo a transição de uma empresa de higiene oral para uma líder em bem-estar oral — inteligente, holística e profundamente focada na longevidade.
+              Um novo capítulo da nossa história.
+              <br><br>
+              Esta não é apenas uma evolução de marca; é uma revolução de mercado. Como nossos valiosos parceiros de vendas, vocês são a força motriz por trás desta transformação.
+              Convidamos você a vivenciar essa transformação conosco, conhecer de perto a nossa visão, a estratégia e o conhecimento de produto essenciais necessários para liderar essa mudança
+              e alcançar um sucesso sem precedentes na nova era da saúde oral.
+            </div>
+
+            <div class="innovations-wide-grid">
+              <div class="innovation-item">
+                <div class="innovation-category">LONGEVIDADE</div>
+                <div class="innovation-value">Bem estar</div>
+              </div>
+
+              <div class="innovation-item">
+                <div class="innovation-category">FASHION</div>
+                <div class="innovation-value">Design & Cores novas</div>
+              </div>
+
+              <div class="innovation-item">
+                <div class="innovation-category">INOVAÇÃO</div>
+                <div class="innovation-value">Pesquisa & Desenvolvimento</div>
+              </div>
+
+              <div class="innovation-item">
+                <div class="innovation-category">COMPROMISSO</div>
+                <div class="innovation-value">Limpeza profunda & Equilíbrio bucal</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section" id="cta">
+          <div class="cta-container">
+            <div class="cta-heading">
+              Venha conferir nossas <span>novidades</span>
+            </div>
+
+            <div class="cta-description">
+              Acesse a apresentação completa e descubra tudo sobre o relançamento global da Edelwhite Swiss.
+            </div>
+
+            <a href="https://gamma.app/docs/PT-Edelwhite-2026-New-swiss-premium-oral-care--gcj32cjep15tylb?mode=doc"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="cta-button-main">
+              <span>Abrir Apresentação Completa</span>
+              <span class="cta-icon">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="card-footer">
+        <div class="footer-text">
+          <strong>Edel White</strong> — Há mais de uma década levando a excelência suíça em saúde bucal para profissionais e pacientes ao redor do mundo.
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // Trava scroll só enquanto a intro estiver ativa
+  document.body.style.overflow = 'hidden';
+
+  // INTRO
+  const introContainer = document.getElementById('introContainer');
+
+  function hideIntro() {
+    introContainer.classList.add('intro-hidden');
+    document.body.style.overflow = 'auto';
+    
+    setTimeout(() => {
+      introContainer.style.display = 'none';
+    }, 1600);
+  }
+
+  setTimeout(hideIntro, 8000);
+
+  // DADOS DOS REPRESENTANTES
+  const representantesPorEstado = {
+    "SP": {
+      nome: "São Paulo",
+      icone: "✅",
+      regioes: {
+        "Norte": [
+          { nome: "Jenni Fontes", telefone: "(11) 99734-0879", email: "jeni.fontes@edel-white.com", whatsapp: "11997340879" }
+        ],
+        "Sul": [
+          { nome: "Luciano Viana", telefone: "(11) 94730-0234", email: "luciano.viana@edel-white.com", whatsapp: "11947300234" },
+          { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163" }
+        ],
+        "Leste": [
+          { nome: "Daniel Rutkoski", telefone: "(11) 97687-7504", email: "daniel.santos@edel-white.com", whatsapp: "11976877504" }
+        ],
+        "Oeste": [
+          { nome: "Jenni Fontes", telefone: "(11) 99734-0879", email: "jeni.viana@edel-white.com", whatsapp: "11997340879" },
+          { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163" }
+        ],
+        "Centro": [
+          { nome: "Jenni Fontes", telefone: "(11) 99734-0879", email: "jeni.fontes@edel-white.com", whatsapp: "11997340879" },
+          { nome: "Luciano Viana", telefone: "(11) 94730-0234", email: "luciano.viana@edel-white.com", whatsapp: "11947300234" },
+          { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163" }
+        ],
+        "Grande ABC": [
+          { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163" }
+        ],
+        "Outras regiões": [
+          { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163" },
+          { nome: "Jenni Fontes", telefone: "(11) 99734-0879", email: "jeni.fontes@edel-white.com", whatsapp: "11997340879" },
+          { nome: "Luciano Viana", telefone: "(11) 94730-0234", email: "luciano.viana@edel-white.com", whatsapp: "11947300234" },
+          { nome: "Daniel Rutkoski", telefone: "(11) 97687-7504", email: "daniel.santos@edel-white.com", whatsapp: "11976877504" }
+        ]
+      }
+    },
+    "RJ": {
+      nome: "Rio de Janeiro",
+      icone: "✅",
+      regioes: {
+        "Todas as regiões": [
+          { nome: "Rose Correa", telefone: "(21) 96488-2040", email: "rose.correa@edel-white.com", whatsapp: "21964882040" }
+        ]
+      }
+    },
+    "MG": {
+      nome: "Minas Gerais",
+      icone: "✅",
+      regioes: {
+        "Todas as regiões": [
+          { nome: "Gilberto Rodrigues", telefone: "(31) 97777-1001", email: "gilberto.rodrigues@edel-white.com", whatsapp: "31977771001" }
+        ]
+      }
+    },
+    "PR": {
+      nome: "Paraná",
+      icone: "✅",
+      regioes: {
+        "Todas as regiões": [
+          { nome: "Paula Cervello", telefone: "(41) 97400-8678", email: "paula.cervello@edel-white.com", whatsapp: "41974008678" }
+        ]
+      }
+    },
+    "RS": {
+      nome: "Rio Grande do Sul",
+      icone: "✅",
+      regioes: {
+        "Todas as regiões": [
+          { nome: "Fabiano Fritsch", telefone: "(51) 97400-2665", email: "fabiano.fritsch@edel-white.com", whatsapp: "51974002665" }
+        ]
+      }
+    },
+    "BR": {
+      nome: "Outros estados",
+      icone: "✅",
+      regioes: {
+        "Todas as regiões": [
+          { nome: "Luciano Viana", telefone: "(11) 94730-0234", email: "luciano.viana@edel-white.com", whatsapp: "11947300234" }
+        ]
+      }
+    },
+    "Comercial": {
+      nome: "Comercial Nacional",
+      icone: "☎️",
+      regioes: {
+        "Território nacional": [
+          { nome: "Juliana Alexandre", telefone: "(11) 97835-8700", email: "juliana.alexandre@edel-white.com", whatsapp: "11978358700" }
+        ]
+      }
+    }
+  };
+
+  // VARIÁVEIS GLOBAIS
+  let selectedState = null;
+  let selectedRegion = null;
+
+  // INICIALIZAÇÃO DOS CARDS DE ESTADO
+  function initializeStateCards() {
+    const statesGrid = document.getElementById('statesGrid');
+    statesGrid.innerHTML = '';
+    
+    Object.keys(representantesPorEstado).forEach(stateCode => {
+      const stateData = representantesPorEstado[stateCode];
+      const regionCount = Object.keys(stateData.regioes).length;
+      const totalReps = Object.values(stateData.regioes).reduce((total, reg) => total + reg.length, 0);
+      
+      const stateCard = document.createElement('div');
+      stateCard.className = 'state-card';
+      stateCard.dataset.state = stateCode;
+      
+      stateCard.innerHTML = `
+        <div class="state-card-header">
+          <div class="state-icon">${stateData.icone}</div>
+          <div>
+            <div class="state-name">${stateData.nome}</div>
+            <div class="state-regions-count">${regionCount} região(ões) • ${totalReps} representante(s)</div>
+          </div>
+        </div>
+        <div class="state-card-footer">
+          <button class="select-state-btn" onclick="selectState('${stateCode}')">
+            Ver Representantes
+          </button>
+        </div>
+      `;
+      
+      statesGrid.appendChild(stateCard);
+    });
+  }
+
+  // SELEÇÃO DE ESTADO
+  function selectState(stateCode) {
+    // Atualiza estado selecionado
+    selectedState = stateCode;
+    selectedRegion = null;
+    
+    // Atualiza classes ativas nos cards
+    document.querySelectorAll('.state-card').forEach(card => {
+      card.classList.remove('active');
+    });
+    
+    const selectedCard = document.querySelector(`.state-card[data-state="${stateCode}"]`);
+    if (selectedCard) {
+      selectedCard.classList.add('active');
+    }
+    
+    // Mostra painel de detalhes
+    showStateDetails(stateCode);
+  }
+
+  // MOSTRA DETALHES DO ESTADO
+  function showStateDetails(stateCode) {
+    const stateData = representantesPorEstado[stateCode];
+    const stateDetailsPanel = document.getElementById('stateDetailsPanel');
+    
+    if (!stateData) return;
+    
+    // Cria HTML do painel de detalhes
+    stateDetailsPanel.innerHTML = `
+      <div class="selected-state-header">
+        <div class="selected-state-title">${stateData.nome}</div>
+        <button class="back-to-states" onclick="backToStates()">
+          ← Voltar para Estados
+        </button>
+      </div>
+      
+      <div class="regions-grid" id="regionsGrid">
+        ${Object.keys(stateData.regioes).map(regionName => {
+          const repsCount = stateData.regioes[regionName].length;
+          return `
+            <div class="region-card" onclick="selectRegion('${regionName}')">
+              <div class="region-name">${regionName}</div>
+              <div class="region-count">${repsCount} representante(s)</div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+      
+      <div class="representatives-section">
+        <div class="representatives-title">Selecione uma região para ver os representantes</div>
+        <div class="representatives-list" id="representativesList">
+          <div class="no-representatives">
+            <div class="no-representatives-icon">👤</div>
+            <div>Selecione uma região acima para ver os representantes</div>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    // Mostra o painel
+    stateDetailsPanel.classList.add('active');
+    
+    // Scroll suave para o painel
+    setTimeout(() => {
+      stateDetailsPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 100);
+  }
+
+  // VOLTAR PARA LISTA DE ESTADOS
+  function backToStates() {
+    const stateDetailsPanel = document.getElementById('stateDetailsPanel');
+    stateDetailsPanel.classList.remove('active');
+    selectedState = null;
+    selectedRegion = null;
+    
+    // Remove classe active de todos os cards
+    document.querySelectorAll('.state-card').forEach(card => {
+      card.classList.remove('active');
+    });
+  }
+
+  // SELEÇÃO DE REGIÃO
+  function selectRegion(regionName) {
+    if (!selectedState) return;
+    
+    selectedRegion = regionName;
+    
+    // Atualiza classes ativas nas regiões
+    document.querySelectorAll('.region-card').forEach(card => {
+      card.classList.remove('active');
+    });
+    
+    const selectedRegionCard = Array.from(document.querySelectorAll('.region-card'))
+      .find(card => card.querySelector('.region-name').textContent === regionName);
+    
+    if (selectedRegionCard) {
+      selectedRegionCard.classList.add('active');
+    }
+    
+    // Mostra representantes da região
+    showRepresentatives(regionName);
+  }
+
+  // MOSTRA REPRESENTANTES
+  function showRepresentatives(regionName) {
+    if (!selectedState || !selectedRegion) return;
+    
+    const stateData = representantesPorEstado[selectedState];
+    const representatives = stateData.regioes[regionName];
+    const representativesList = document.getElementById('representativesList');
+    
+    if (!representatives || representatives.length === 0) {
+      representativesList.innerHTML = `
+        <div class="no-representatives">
+          <div class="no-representatives-icon">👤</div>
+          <div>Nenhum representante encontrado para esta região</div>
+        </div>
+      `;
+      return;
+    }
+    
+    representativesList.innerHTML = representatives.map(rep => `
+      <div class="representative-card">
+        <div class="rep-header">
+          <div class="rep-name">${rep.nome}</div>
+          <div class="rep-contact-buttons">
+            <button class="contact-btn whatsapp" onclick="openWhatsApp('${rep.nome}', '${rep.whatsapp}')">
+              <span>WhatsApp</span>
+            </button>
+            <button class="contact-btn" onclick="copyEmail('${rep.nome}', '${rep.email}')">
+              <span>Copiar Email</span>
+            </button>
+          </div>
+        </div>
+        <div class="rep-details">
+          <div class="rep-detail">
+            <span class="rep-label">Email</span>
+            <span class="rep-value">${rep.email}</span>
+          </div>
+          <div class="rep-detail">
+            <span class="rep-label">Telefone</span>
+            <span class="rep-value">${rep.telefone}</span>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // FUNÇÕES DE CONTATO
+  function openWhatsApp(name, whatsapp) {
+    const message = `Olá ${name}, gostaria de mais informações sobre a EdelWhite.`;
+    const whatsappUrl = `https://wa.me/55${whatsapp}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  }
+
+  async function copyEmail(name, email) {
+    try {
+      await navigator.clipboard.writeText(email);
+      alert(`Email de ${name} copiado para a área de transferência:\n${email}`);
+    } catch (err) {
+      prompt(`Copie o email de ${name} manualmente:`, email);
+    }
+  }
+
+  // INICIALIZAÇÃO
+  document.addEventListener('DOMContentLoaded', () => {
+    initializeStateCards();
+    
+    // REMOVIDO: Seleção automática de SP
+    // Não seleciona nenhum estado por padrão
+  });
+</script>
+</body>
+</html>
